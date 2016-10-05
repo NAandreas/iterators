@@ -15,12 +15,14 @@ def test_cubes():
         assert next(c) == i ** 3
 
 
+
 def test_primes_is_iterator():
     assert '__init__' in dir(Primes)
     iterator = iter(Primes())
     assert '__next__' in dir(iterator)
 
 
+@pytest.mark.skip('1')
 def test_primes():
     with open('tests/data_primes.json') as file:
         data = json.load(file)
@@ -30,10 +32,13 @@ def test_primes():
         assert next(p) == prime
 
 
+
 def test_fibonnaci_is_iterator(self):
     assert '__init__' in dir(Fibonacci)
     iterator = iter(Fibonacci())
     assert '__next__' in dir(iterator)
+
+
 
 def test_fibonacci(self):
     with open('tests/data_fibonacci.json') as file:
@@ -44,12 +49,14 @@ def test_fibonacci(self):
         assert next(f) == fibonacci
 
 
+@pytest.mark.skip('1')
 def test_alphabet_is_iterator(self):
     assert '__init__' in dir(Alphabet)
     iterator = iter(Alphabet())
     assert '__next__' in dir(iterator)
 
 
+@pytest.mark.skip('1')
 def test_alphabet(self):
     data = ['Alef', 'Bet', 'Gimel', 'Dalet', 'He', 'Vav', 'Zayin', 'Het',
             'Tet', 'Yod', 'Kaf', 'Lamed', 'Mem', 'Nun', 'Samekh', 'Ayin',
@@ -62,12 +69,14 @@ def test_alphabet(self):
         next(a)
 
 
+@pytest.mark.skip('1')
 def test_permutations_is_iterator(self):
     assert '__init__' in dir(Permutations)
     iterator = iter(Permutations())
     assert '__next__' in dir(iterator)
 
 
+@pytest.mark.skip('1')
 def test_permutations(self):
     data = ['abc', 'acb', 'bac', 'cab', 'cba', 'bca']
     result = []
@@ -81,12 +90,14 @@ def test_permutations(self):
         next(p)
 
 
+@pytest.mark.skip('1')
 def test_look_and_say_is_iterator():
     assert '__init__' in dir(LookAndSay)
     iterator = iter(LookAndSay())
     assert '__next__' in dir(iterator)
 
 
+@pytest.mark.skip('1')
 def test_look_and_say():
     with open('tests/data_lookandsay.json') as file:
         data = json.load(file)

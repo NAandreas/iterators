@@ -1,5 +1,5 @@
 """Övningar på iterators."""
-
+from math import sqrt, floor
 
 class Cubes():
     """En iterator som skapar en serie med kuber (i ** 3).
@@ -10,7 +10,16 @@ class Cubes():
     Talserien ska inte ha något slut.
 
     """
-    pass
+    def __init__(self):
+        self.c = 0
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        self.c += 1
+        return self.c ** 3
+
 
 
 class Primes():
@@ -19,7 +28,22 @@ class Primes():
     Talserien som förväntas börjar alltså: 2, 3, 5, 7, 11, 13, 17, 19, 23, ...
 
     """
-    pass
+    def __init__(self):
+        self.p = 1
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        self.p += 1
+        x = floor(sqrt(self.p))
+        y = 1
+        while y < x:
+            y += 1
+            if self.p / y == int(self.p / y):
+                break
+        else:
+            return self.p
 
 
 class Fibonacci():
@@ -31,8 +55,12 @@ class Fibonacci():
     Alltså börjar serien: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
 
     """
-    pass
+    def __init__(self):
 
+        def __iter__(self):
+            return self
+
+    def
 
 class Alphabet():
     """En iterator som returnerar namnen på tecknen i det hebreiska alfabetet.
@@ -44,6 +72,7 @@ class Alphabet():
     Nun, Samekh, Ayin, Pe, Tsadi, Qof, Resh, Shin, Tav
 
     """
+
 
 
 class Permutations():
